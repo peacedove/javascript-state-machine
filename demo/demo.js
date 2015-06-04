@@ -31,26 +31,26 @@ Demo = function() {
     ],
 
     callbacks: {
-      onbeforestart: function(event, from, to) { log("STARTING UP"); },
+      onbeforeStart: function(event, from, to) { log("STARTING UP"); },
       onstart:       function(event, from, to) { log("READY");       },
 
-      onbeforewarn:  function(event, from, to) { log("START   EVENT: warn!",  true);  },
-      onbeforepanic: function(event, from, to) { log("START   EVENT: panic!", true);  },
-      onbeforecalm:  function(event, from, to) { log("START   EVENT: calm!",  true);  },
-      onbeforeclear: function(event, from, to) { log("START   EVENT: clear!", true);  },
+      onbeforeWarn:  function(event, from, to) { log("START   EVENT: warn!",  true);  },
+      onbeforePanic: function(event, from, to) { log("START   EVENT: panic!", true);  },
+      onbeforeCalm:  function(event, from, to) { log("START   EVENT: calm!",  true);  },
+      onbeforeClear: function(event, from, to) { log("START   EVENT: clear!", true);  },
 
-      onwarn:        function(event, from, to) { log("FINISH  EVENT: warn!");         },
-      onpanic:       function(event, from, to) { log("FINISH  EVENT: panic!");        },
-      oncalm:        function(event, from, to) { log("FINISH  EVENT: calm!");         },
-      onclear:       function(event, from, to) { log("FINISH  EVENT: clear!");        },
+      onWarn:        function(event, from, to) { log("FINISH  EVENT: warn!");         },
+      onPanic:       function(event, from, to) { log("FINISH  EVENT: panic!");        },
+      onCalm:        function(event, from, to) { log("FINISH  EVENT: calm!");         },
+      onClear:       function(event, from, to) { log("FINISH  EVENT: clear!");        },
 
-      onleavegreen:  function(event, from, to) { log("LEAVE   STATE: green");  },
-      onleaveyellow: function(event, from, to) { log("LEAVE   STATE: yellow"); },
-      onleavered:    function(event, from, to) { log("LEAVE   STATE: red");    async(to); return StateMachine.ASYNC; },
+      onleaveGreen:  function(event, from, to) { log("LEAVE   STATE: green");  },
+      onleaveYellow: function(event, from, to) { log("LEAVE   STATE: yellow"); },
+      onleaveRed:    function(event, from, to) { log("LEAVE   STATE: red");    async(to); return StateMachine.ASYNC; },
 
-      ongreen:       function(event, from, to) { log("ENTER   STATE: green");  },
-      onyellow:      function(event, from, to) { log("ENTER   STATE: yellow"); },
-      onred:         function(event, from, to) { log("ENTER   STATE: red");    },
+      onGreen:       function(event, from, to) { log("ENTER   STATE: green");  },
+      onYellow:      function(event, from, to) { log("ENTER   STATE: yellow"); },
+      onRed:         function(event, from, to) { log("ENTER   STATE: red");    },
 
       onchangestate: function(event, from, to) { log("CHANGED STATE: " + from + " to " + to); }
     }
